@@ -52,11 +52,8 @@ class Silnik:
 
     def stworz_gracza(self):
         imie = input(
-            f"\n\tPrzystojny menzczyzno! Jak brzmi twe imie?\n\t(Jesli posiadasz w imieniu znaki specjalne,"
-            f"\n\tlub polskie, nie podawaj ich gdyz zostana one usuniete. Dla komfortu oczu zas zalecamy przyjecie meskiego imienia.)"
+            f"\n\tPrzystojny menzczyzno! Jak brzmi twe imie?\n\t(Dla komfortu oczu zalecamy przyjecie meskiego imienia.)"
             f"\n\t:")
-        imie = "".join([ch for ch in imie if ch.isalpha()])
-        imie = "".join([ch for ch in imie if ch.isascii()])
         tabu = ["Debil", "JP", "Ciota", "Cipek", "Dupek", "Daln", "Dziecko", "Murzyn", "Gnojek", "Cwel", "OVERLORD"]
         for tab in tabu:
             if re.search(tab, imie, re.IGNORECASE):
